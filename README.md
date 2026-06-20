@@ -9,41 +9,50 @@ This repository contains two Otty theme files:
 
 The light palette is adapted from the Claude VS Code themes. The dark terminal ANSI palette is adapted from the Claude dark editor token colors because the upstream dark theme does not define terminal ANSI colors.
 
-## One-line Install
+## Recommended: One-command Install
 
-Run this command:
+Recommended for most users:
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/YuChenSSR/otty-claude-themes/main/install.sh | sh
 ```
 
-The script downloads both themes into:
+That's it. The script installs both themes into:
 
 ```text
 ~/.config/otty/themes/
 ```
 
-If the Otty CLI is available, it also tries to set:
+If the Otty CLI is available, it also selects the themes for you:
 
 ```toml
 theme = "Claude Light"
 theme-dark = "Claude Dark"
 ```
 
-It can use `otty`, `otty-cli`, or the macOS app-bundled CLI at:
+<br>
 
-```text
-/Applications/Otty.app/Contents/MacOS/otty-cli
-```
+---
 
-For a more cautious install, inspect the script first:
+## Other Install Options
+
+Use one of these if you want to inspect the script first, install from a local clone, or copy the files manually.
+
+### Inspect Before Running
+
+Download the installer first:
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/YuChenSSR/otty-claude-themes/main/install.sh -o install-otty-claude-themes.sh
+```
+
+Then run it:
+
+```sh
 sh install-otty-claude-themes.sh
 ```
 
-## Install From a Clone
+### Install From a Clone
 
 ```sh
 git clone https://github.com/YuChenSSR/otty-claude-themes.git
@@ -53,7 +62,15 @@ cd otty-claude-themes
 
 When run from a clone, the installer copies the local files in `themes/` instead of downloading them.
 
-## Otty UI Setup
+### Otty CLI Detection
+
+The installer can use `otty`, `otty-cli`, or the macOS app-bundled CLI at:
+
+```text
+/Applications/Otty.app/Contents/MacOS/otty-cli
+```
+
+### Otty UI Setup
 
 If the script cannot change your Otty config automatically, select the themes in Otty:
 
@@ -72,7 +89,7 @@ Then choose:
 - Theme: `Claude Light`
 - Dark Theme: `Claude Dark`
 
-## Manual Install
+### Manual Install
 
 Copy the theme files manually:
 
