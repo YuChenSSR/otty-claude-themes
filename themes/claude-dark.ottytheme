@@ -1,0 +1,84 @@
+[meta]
+name        = "Claude Dark"
+author      = "Lumidew / AuroralFrost, adapted for Otty"
+mode        = "dark"
+description = "Claude-inspired dark theme adapted from the VS Code Claude color themes"
+
+[terminal]
+foreground           = "#F5F5F5"
+background           = "#1A1A1A"
+cursor               = "#D97706"
+cursor-text          = "#1A1A1A"
+selection-foreground = "#F5F5F5"
+selection-background = "#6D4316"
+palette = [
+    "#1A1A1A", "#FF6B9D", "#5CDB95", "#FFB84D",
+    "#5AA3FF", "#C197FF", "#4ECDC4", "#B8B8B8",
+    "#888888", "#FF8CAF", "#7BE2AA", "#FFC766",
+    "#7BB8FF", "#D0A9FF", "#73E4DC", "#F5F5F5",
+]
+
+[token]
+foreground = "#F5F5F5"
+secondary  = "#B8B8B8"
+tertiary   = "#888888"
+accent     = "#D97706"
+radius     = 4
+shadow     = "0 20px 40px rgba(0,0,0,0.35)"
+font-ui    = ["-apple-system", "BlinkMacSystemFont", "SF Pro", "sans-serif"]
+font-mono  = ["JetBrains Mono", "Menlo", "monospace"]
+font-size  = 13
+
+[panel]
+background = "#222222"
+surface    = "#333333"
+border     = "#404040"
+
+[window]
+background = "#222222"
+
+[sidebar]
+background   = "#333333"
+foreground   = "#B8B8B8"
+border-right = "1px solid #404040"
+
+[tab]
+radius      = 4
+background  = "#2A2A2A"
+foreground  = "#B8B8B8"
+font-weight = 400
+
+[tab.active]
+background  = "#1A1A1A"
+foreground  = "#F5F5F5"
+border      = "1px solid #404040"
+font-weight = 500
+
+[tab.hover]
+background = "#1A1A1A"
+foreground = "#F5F5F5"
+
+[tab-bar]
+height  = 44
+padding = 8
+
+[tab-bar.tab]
+radius = 14
+height = 32
+
+[tab-bar.tab.active]
+shadow = "0 1px 4px rgba(0,0,0,0.22)"
+
+[selection]
+foreground = "#F5F5F5"
+background = "#6D4316"
+
+[cursor]
+color = "#D97706"
+text  = "#1A1A1A"
+
+[container]
+radius  = 4
+shadow  = "none"
+margin  = 0
+padding = 8
