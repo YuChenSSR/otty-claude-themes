@@ -9,9 +9,41 @@ This repository contains two Otty theme files:
 
 The light palette is adapted from the Claude VS Code themes. The dark terminal ANSI palette is adapted from the Claude dark editor token colors because the upstream dark theme does not define terminal ANSI colors.
 
-## Install
+## One-line Install
 
-Clone the repository and run the installer:
+Run this command:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/YuChenSSR/otty-claude-themes/main/install.sh | sh
+```
+
+The script downloads both themes into:
+
+```text
+~/.config/otty/themes/
+```
+
+If the Otty CLI is available, it also tries to set:
+
+```toml
+theme = "Claude Light"
+theme-dark = "Claude Dark"
+```
+
+It can use `otty`, `otty-cli`, or the macOS app-bundled CLI at:
+
+```text
+/Applications/Otty.app/Contents/MacOS/otty-cli
+```
+
+For a more cautious install, inspect the script first:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/YuChenSSR/otty-claude-themes/main/install.sh -o install-otty-claude-themes.sh
+sh install-otty-claude-themes.sh
+```
+
+## Install From a Clone
 
 ```sh
 git clone https://github.com/YuChenSSR/otty-claude-themes.git
@@ -19,50 +51,23 @@ cd otty-claude-themes
 ./install.sh
 ```
 
-The installer copies both `.ottytheme` files into:
+When run from a clone, the installer copies the local files in `themes/` instead of downloading them.
+
+## Otty UI Setup
+
+If the script cannot change your Otty config automatically, select the themes in Otty:
 
 ```text
-~/.config/otty/themes/
+Settings -> Appearance
 ```
 
-It also tries to set:
-
-```toml
-theme = "Claude Light"
-theme-dark = "Claude Dark"
-```
-
-If your Otty CLI is not installed into `PATH`, install it from Otty:
+Enable:
 
 ```text
-Settings -> Shell -> Install CLI
+Use separated theme for dark mode
 ```
 
-On macOS, the installer can also use:
-
-```text
-/Applications/Otty.app/Contents/MacOS/otty-cli
-```
-
-## Install Without Cloning
-
-If your Otty CLI is available, import the themes directly from GitHub:
-
-```sh
-otty theme import https://raw.githubusercontent.com/YuChenSSR/otty-claude-themes/main/themes/claude-light.ottytheme --overwrite
-otty theme import https://raw.githubusercontent.com/YuChenSSR/otty-claude-themes/main/themes/claude-dark.ottytheme --overwrite
-otty config set theme "Claude Light"
-otty config set theme-dark "Claude Dark"
-otty config reload
-```
-
-Then open Otty and enable dark/light switching:
-
-```text
-Settings -> Appearance -> Use separated theme for dark mode
-```
-
-Choose:
+Then choose:
 
 - Theme: `Claude Light`
 - Dark Theme: `Claude Dark`
@@ -82,8 +87,6 @@ Then select them in Otty:
 ```text
 Settings -> Appearance
 ```
-
-Enable `Use separated theme for dark mode`, set the light theme to `Claude Light`, and set the dark theme to `Claude Dark`.
 
 ## Credits
 
