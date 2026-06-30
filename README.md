@@ -105,6 +105,11 @@ Then select them in Otty:
 Settings -> Appearance
 ```
 
+## More Claude Themes
+
+For Claude-inspired themes and app-specific setup notes across more apps, see
+[Claude Theme Hub](https://github.com/YuChenSSR/claude-theme-hub).
+
 ## Credits
 
 Adapted for Otty from:
